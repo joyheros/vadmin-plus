@@ -16,7 +16,7 @@
   "repository": "https://github.com/joyheros/vadmin-plus",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --mode production",
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
@@ -40,7 +40,7 @@
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.10.2",
+    "@rushstack/eslint-patch": "^1.10.3",
     "@types/path-browserify": "^1.0.2",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/eslint-config-prettier": "^9.0.0",
@@ -50,7 +50,8 @@
     "jsdom": "^24.0.0",
     "marked": "^12.0.2",
     "prettier": "^3.2.5",
-    "sass": "^1.77.1",
+    "sass": "^1.77.2",
+    "terser": "^5.31.0",
     "unplugin-auto-import": "^0.17.6",
     "unplugin-vue-components": "^0.27.0",
     "vite": "^5.2.11",
