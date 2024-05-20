@@ -140,7 +140,8 @@ pnpm lint
 
 ## 维护者
 
-[@joyheors](https://github.com/joyheros)
+[@joyheors](https://github.com/joyheros) 
+[@wqjin-frank](https://github.com/wqjin-frank)
 
 ## 许可证
 

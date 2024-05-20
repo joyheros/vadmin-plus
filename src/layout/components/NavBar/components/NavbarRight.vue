@@ -16,15 +16,12 @@
     <!-- 用户头像 -->
     <el-dropdown class="setting-item" trigger="click">
       <div class="flex-center h100% p10px">
-        <img
-          :src="userStore.user.avatar + '?imageView2/1/w/80/h/80'"
-          class="rounded-full mr-10px w24px w24px"
-        />
+        <img :src="avatar" class="rounded-full mr-10px w24px w24px" />
         <span>{{ userStore.user.username }}</span>
       </div>
       <template #dropdown>
         <el-dropdown-menu>
-          <a target="_blank" href="https://juejin.cn/post/7228990409909108793">
+          <a target="_blank" href="">
             <el-dropdown-item>{{ $t('navbar.profile') }}</el-dropdown-item>
           </a>
           <el-dropdown-item divided @click="logout">
@@ -47,6 +44,7 @@ import { useGlobalStore, useTabviewStore, useUserStore, useSettingsStore } from 
 import defaultSettings from '@/config/settings'
 import { DeviceEnum } from '@/enums/DeviceEnum'
 import Notice from './Notice/index.vue'
+import avatar from '@/assets/avatar.png'
 
 const globalStore = useGlobalStore()
 const tabviewStore = useTabviewStore()
@@ -55,10 +53,8 @@ const settingStore = useSettingsStore()
 
 const route = useRoute()
 const router = useRouter()
-
-const isMobile = computed(() => globalStore.device === DeviceEnum.MOBILE)
-
 const { isFullscreen, toggle } = useFullscreen()
+const isMobile = computed(() => globalStore.device === DeviceEnum.MOBILE)
 
 /**
  * 注销

@@ -92,18 +92,8 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       //target: 'es2015',
+      sourcemap: false,
       chunkSizeWarningLimit: 2000, // 消除打包大小超过500kb警告
-      minify: "terser",
-      terserOptions: {
-        compress: {
-          keep_infinity: true,
-          drop_console: true,
-          drop_debugger: true,
-        },
-        format: {
-          comments: false, // 删除注释
-        },
-      },
       rollupOptions: {
         output: {
           entryFileNames: "script/[name].[hash].js",

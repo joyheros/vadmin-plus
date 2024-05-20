@@ -4,10 +4,7 @@
       <el-row justify="space-between">
         <el-col :span="18" :xs="24">
           <div class="flex h-full items-center">
-            <img
-              class="w-20 h-20 mr-5 rounded-full"
-              :src="userStore.user.avatar + '?imageView2/1/w/80/h/80'"
-            />
+            <img class="w-20 h-20 mr-5 rounded-full" :src="avatar" />
             <div>
               <p>{{ $t('home.hello') }}{{ username }}</p>
               <p class="text-sm text-gray">{{ motto }}</p>
@@ -64,7 +61,7 @@ defineOptions({
   inheritAttrs: false
 })
 import { useUserStore } from '@/stores/modules/user'
-
+import avatar from '@/assets/avatar.png'
 const userStore = useUserStore()
 const date = new Date()
 const username = userStore.user.nickname

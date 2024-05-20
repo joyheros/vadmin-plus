@@ -16,7 +16,7 @@
 <script setup>
 import defaultSettings from '@/config/settings'
 import { useSettingsStore } from '@/stores'
-
+import logo from '@/assets/logo.png';
 const settingsStore = useSettingsStore()
 
 defineProps({
@@ -25,8 +25,6 @@ defineProps({
     required: true
   }
 })
-
-const logo = ref(new URL(`../../../../assets/logo.png`, import.meta.url).href)
 </script>
 
 <style lang="scss" scoped>

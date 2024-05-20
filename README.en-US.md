@@ -140,7 +140,8 @@ pnpm lint
 
 ## maintainers
 
-[@joyheors](https://github.com/joyheros)
+[@joyheors](https://github.com/joyheros)  
+[@wqjin-frank](https://github.com/wqjin-frank)
 
 ## License
 
