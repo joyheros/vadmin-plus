@@ -6,6 +6,10 @@
 
 [vadmin-plus](https://github.com/joyheros/vadmin-plus) 是一个免费的开源管理前端模板，使用pnpm、vue3、vite5、Element-Plus、Vue-Router、Pinia、Axios等前端主流技术栈构建。为了降低学习的难度，本项目尽量减少引入第三方组件，对Element Plus等的组件也没有再进行封装，从而保证上手成本低、扩展性高，希望通过本项目能够让大家在学习Vue3等技术栈时少花些时间，少走些弯路。
 
+## 预览地址
+
+- [github 站点](https://joyheros.github.io/vadmin-plus/)
+
 ## 项目特点
 
 - **最新技术栈**：使用Vue3、Vite5等前端前沿技术开发
@@ -140,14 +144,8 @@ pnpm lint
 
 ## 维护者
 
-[@joyheors](https://github.com/joyheros) 
+[@joyheors](https://github.com/joyheros)  
 [@wqjin-frank](https://github.com/wqjin-frank)
-
-## 许可证
-
-完全免费开源
-
-[MIT © 2024-present, vadmin-plus](./LICENSE)
 
 ## `Star`
 
