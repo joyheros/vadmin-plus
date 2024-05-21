@@ -3,9 +3,7 @@
 import SingleUpload from '@/components/Upload/SingleUpload.vue'
 import MultiUpload from '@/components/Upload/MultiUpload.vue'
 
-const singlePicUrl = ref(
-  'https://cdn.pixabay.com/photo/2016/10/03/07/00/black-and-white-1711001_1280.jpg'
-)
+const singlePicUrl = ref('https://cdn.pixabay.com/photo/2016/10/03/07/00/black-and-white-1711001_1280.jpg')
 // 这里放外链图片，防止被删
 const multiPicUrls = ref([
   'https://cdn.pixabay.com/photo/2017/05/06/14/13/pathway-2289978_1280.jpg',

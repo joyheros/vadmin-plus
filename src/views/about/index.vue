@@ -11,51 +11,27 @@
         </div>
       </template>
       <el-descriptions border size="large" :column="3">
-        <el-descriptions-item
-          label-class-name="desc-label"
-          class-name="desc-info"
-          min-width="200px"
-        >
+        <el-descriptions-item label-class-name="desc-label" class-name="desc-info" min-width="200px">
           <template #label> 名称 </template>
           {{ name }}
         </el-descriptions-item>
-        <el-descriptions-item
-          label-class-name="desc-label"
-          class-name="desc-info"
-          min-width="200px"
-        >
+        <el-descriptions-item label-class-name="desc-label" class-name="desc-info" min-width="200px">
           <template #label> 当前版本 </template>
           {{ version }}
         </el-descriptions-item>
-        <el-descriptions-item
-          label-class-name="desc-label"
-          class-name="desc-info"
-          min-width="200px"
-        >
+        <el-descriptions-item label-class-name="desc-label" class-name="desc-info" min-width="200px">
           <template #label> 最后编译时间 </template>
           {{ buildTimestamp }}
         </el-descriptions-item>
-        <el-descriptions-item
-          label-class-name="desc-label"
-          class-name="desc-info"
-          min-width="200px"
-        >
+        <el-descriptions-item label-class-name="desc-label" class-name="desc-info" min-width="200px">
           <template #label> 推荐node版本 </template>
           {{ engines.node }}
         </el-descriptions-item>
-        <el-descriptions-item
-          label-class-name="desc-label"
-          class-name="desc-info"
-          min-width="200px"
-        >
+        <el-descriptions-item label-class-name="desc-label" class-name="desc-info" min-width="200px">
           <template #label> 推荐pnpm版本 </template>
           {{ engines.pnpm }}
         </el-descriptions-item>
-        <el-descriptions-item
-          label-class-name="desc-label"
-          class-name="desc-link"
-          min-width="200px"
-        >
+        <el-descriptions-item label-class-name="desc-label" class-name="desc-link" min-width="200px">
           <template #label> 代码地址 </template>
           <a href="https://github.com/joyheros/vadmin-plus" target="_blank"> 代码链接 </a>
         </el-descriptions-item>
@@ -129,8 +105,6 @@ Object.keys(dependencies).forEach((key) => {
 Object.keys(devDependencies).forEach((key) => {
   devSchema.push({ field: devDependencies[key], label: key })
 })
-
-
 </script>
 
 <style lang="scss" scoped>

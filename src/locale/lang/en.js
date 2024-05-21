@@ -2,6 +2,7 @@ export default {
   route: {
     home: 'Home',
     login: 'Login',
+    account: 'Account',
     redirect: 'Redirect',
     error401: 'Error 401',
     error401: 'Error 403',
@@ -78,7 +79,8 @@ export default {
     back: 'Back Home'
   },
   footer: {
-    declare: 'This website is only for personal learning and reference, if their own use the site information to make problems, the site will not be responsible, nor undertake any legal responsibility.'
+    declare:
+      'This website is only for personal learning and reference, if their own use the site information to make problems, the site will not be responsible, nor undertake any legal responsibility.'
   },
   menubar: {
     home: 'Home'
@@ -86,7 +88,7 @@ export default {
   navbar: {
     home: 'Home',
     logout: 'Logout',
-    profile: 'Profile'
+    account: 'Account'
   },
   notice: {
     empty: 'No Message'

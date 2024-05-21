@@ -1,13 +1,5 @@
 <script setup>
-import {
-  getRolePage,
-  updateRole,
-  getRoleForm,
-  addRole,
-  deleteRoles,
-  getRoleMenuIds,
-  updateRoleMenus
-} from '@/api/role'
+import { getRolePage, updateRole, getRoleForm, addRole, deleteRoles, getRoleMenuIds, updateRoleMenus } from '@/api/role'
 import { getMenuOptions } from '@/api/menu'
 
 defineOptions({
@@ -214,18 +206,11 @@ onMounted(() => {
     <div class="search-container">
       <el-form ref="queryFormRef" :model="queryParams" :inline="true">
         <el-form-item prop="keywords" label="关键字">
-          <el-input
-            v-model="queryParams.keywords"
-            placeholder="角色名称"
-            clearable
-            @keyup.enter="handleQuery"
-          />
+          <el-input v-model="queryParams.keywords" placeholder="角色名称" clearable @keyup.enter="handleQuery" />
         </el-form-item>
 
         <el-form-item>
-          <el-button type="primary" @click="handleQuery"
-            ><svg-icon icon-class="search" />搜索</el-button
-          >
+          <el-button type="primary" @click="handleQuery"><svg-icon icon-class="search" />搜索</el-button>
           <el-button @click="resetQuery"><svg-icon icon-class="reset" />重置</el-button>
         </el-form-item>
       </el-form>
@@ -233,9 +218,7 @@ onMounted(() => {
 
     <el-card shadow="never" class="table-container">
       <template #header>
-        <el-button type="success" @click="openDialog()"
-          ><svg-icon icon-class="plus" />新增</el-button
-        >
+        <el-button type="success" @click="openDialog()"><svg-icon icon-class="plus" />新增</el-button>
         <el-button type="danger" :disabled="ids.length === 0" @click="handleDelete()">
           <svg-icon icon-class="trash" />删除
         </el-button>
@@ -314,12 +297,7 @@ onMounted(() => {
         </el-form-item>
 
         <el-form-item label="排序" prop="sort">
-          <el-input-number
-            v-model="formData.sort"
-            controls-position="right"
-            :min="0"
-            style="width: 100px"
-          />
+          <el-input-number v-model="formData.sort" controls-position="right" :min="0" style="width: 100px" />
         </el-form-item>
       </el-form>
 
@@ -332,19 +310,9 @@ onMounted(() => {
     </el-dialog>
 
     <!-- 分配菜单弹窗  -->
-    <el-dialog
-      v-model="menuDialogVisible"
-      :title="'【' + checkedRole.name + '】权限分配'"
-      width="800px"
-    >
+    <el-dialog v-model="menuDialogVisible" :title="'【' + checkedRole.name + '】权限分配'" width="800px">
       <el-scrollbar v-loading="loading" max-height="600px">
-        <el-tree
-          ref="menuRef"
-          node-key="value"
-          show-checkbox
-          :data="menuList"
-          :default-expand-all="true"
-        >
+        <el-tree ref="menuRef" node-key="value" show-checkbox :data="menuList" :default-expand-all="true">
           <template #default="{ data }">
             {{ data.label }}
           </template>

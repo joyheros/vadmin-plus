@@ -9,9 +9,9 @@ export const baseRoutes = [
   {
     path: '/redirect',
     component: Layout,
-    meta: { 
+    meta: {
       title: 'redirect',
-      hidden: true 
+      hidden: true
     },
     children: [
       {
@@ -23,12 +23,11 @@ export const baseRoutes = [
   {
     path: '/login',
     component: () => import('@/views/login/index.vue'),
-    meta: { 
+    meta: {
       title: 'login',
-      hidden: true 
+      hidden: true
     }
   },
-
   {
     path: '/',
     name: '/',
@@ -48,35 +47,43 @@ export const baseRoutes = [
         }
       },
       {
+        path: 'account',
+        component: () => import('@/views/account/index.vue'),
+        meta: {
+          title: 'account',
+          hidden: true
+        }
+      },
+      {
         path: '401',
         component: () => import('@/views/error/401.vue'),
-        meta: { 
+        meta: {
           title: 'error401',
-          hidden: true 
+          hidden: true
         }
       },
       {
         path: '403',
         component: () => import('@/views/error/403.vue'),
-        meta: { 
+        meta: {
           title: 'error403',
-          hidden: true 
+          hidden: true
         }
       },
       {
         path: '404',
         component: () => import('@/views/error/404.vue'),
-        meta: { 
+        meta: {
           title: 'error404',
-          hidden: true 
+          hidden: true
         }
       },
       {
         path: '500',
         component: () => import('@/views/error/500.vue'),
-        meta: { 
+        meta: {
           title: 'error500',
-          hidden: true 
+          hidden: true
         }
       }
     ]

@@ -87,9 +87,7 @@ onMounted(() => {
           />
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="handleQuery"
-            ><svg-icon icon-class="search" />搜索</el-button
-          >
+          <el-button type="primary" @click="handleQuery"><svg-icon icon-class="search" />搜索</el-button>
           <el-button @click="resetQuery"><svg-icon icon-class="reset" />重置</el-button>
         </el-form-item>
       </el-form>

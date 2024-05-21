@@ -12,7 +12,12 @@
       <!-- 语言选择 -->
       <lang-select class="setting-item" />
     </template>
-
+    <!-- 设置 -->
+    <template v-if="defaultSettings.showSettings">
+      <div class="setting-item" @click="settingStore.settingsVisible = true">
+        <svg-icon icon-class="setting" />
+      </div>
+    </template>
     <!-- 用户头像 -->
     <el-dropdown class="setting-item" trigger="click">
       <div class="flex-center h100% p10px">
@@ -21,22 +26,15 @@
       </div>
       <template #dropdown>
         <el-dropdown-menu>
-          <a target="_blank" href="">
-            <el-dropdown-item>{{ $t('navbar.profile') }}</el-dropdown-item>
-          </a>
+          <el-dropdown-item @click="toAccount">
+            {{ $t('navbar.account') }}
+          </el-dropdown-item>
           <el-dropdown-item divided @click="logout">
             {{ $t('navbar.logout') }}
           </el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>
-
-    <!-- 设置 -->
-    <template v-if="defaultSettings.showSettings">
-      <div class="setting-item" @click="settingStore.settingsVisible = true">
-        <svg-icon icon-class="setting" />
-      </div>
-    </template>
   </div>
 </template>
 <script setup>
@@ -55,6 +53,10 @@ const route = useRoute()
 const router = useRouter()
 const { isFullscreen, toggle } = useFullscreen()
 const isMobile = computed(() => globalStore.device === DeviceEnum.MOBILE)
+
+function toAccount() {
+  router.push('/account')
+}
 
 /**
  * 注销

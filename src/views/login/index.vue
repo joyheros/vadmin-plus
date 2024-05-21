@@ -2,13 +2,7 @@
   <div class="login-container">
     <!-- 顶部 -->
     <div class="absolute-lt flex-x-end p-3 w-full">
-      <el-switch
-        v-model="isDark"
-        inline-prompt
-        :active-icon="Moon"
-        :inactive-icon="Sunny"
-        @change="toggleTheme"
-      />
+      <el-switch v-model="isDark" inline-prompt :active-icon="Moon" :inactive-icon="Sunny" @change="toggleTheme" />
       <lang-select class="ml-2 cursor-pointer" />
     </div>
     <!-- 登录表单 -->
@@ -75,12 +69,7 @@
           <el-link type="primary" href="#">{{ $t('login.forgot') }}</el-link>
         </div>
         <!-- 登录按钮 -->
-        <el-button
-          :loading="loading"
-          type="primary"
-          size="large"
-          class="w-full"
-          @click.prevent="handleLogin"
+        <el-button :loading="loading" type="primary" size="large" class="w-full" @click.prevent="handleLogin"
           >{{ $t('login.login') }}
         </el-button>
         <div class="w-full h-[35px] flex items-center">

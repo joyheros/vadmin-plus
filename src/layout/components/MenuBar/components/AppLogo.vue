@@ -16,7 +16,7 @@
 <script setup>
 import defaultSettings from '@/config/settings'
 import { useSettingsStore } from '@/stores'
-import logo from '@/assets/logo.png';
+import logo from '@/assets/logo.png'
 const settingsStore = useSettingsStore()
 
 defineProps({

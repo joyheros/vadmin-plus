@@ -1,14 +1,7 @@
 <template>
   <div class="flex">
-    <div
-      class="px-[15px] flex items-center justify-center color-[var(--el-text-color-regular)]"
-      @click="toggleMenuBar"
-    >
-      <svg-icon
-        class="switcher"
-        :class="{ 'is-active': globalStore.menubar.opened }"
-        icon-class="side-toggle"
-      />
+    <div class="px-[15px] flex items-center justify-center color-[var(--el-text-color-regular)]" @click="toggleMenuBar">
+      <svg-icon class="switcher" :class="{ 'is-active': globalStore.menubar.opened }" icon-class="side-toggle" />
     </div>
     <breadcrumb />
   </div>

@@ -67,7 +67,7 @@ function updateValue(layout) {
   background: #f0f2f5;
   border-radius: 4px;
 
-  &.mix div:nth-child(1){
+  &.mix div:nth-child(1) {
     width: 100%;
     height: 30%;
     background: #1b2a47;

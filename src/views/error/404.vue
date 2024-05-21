@@ -10,7 +10,7 @@ const toHome = () => {
 <template>
   <div class="error-container">
     <div class="error-icon">
-      <svg-icon :icon-class="404" size="20rem" />
+      <svg-icon icon-class="error-404" size="20rem" />
     </div>
     <div class="text">
       <span>{{ $t('error.404.title') }}</span>

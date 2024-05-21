@@ -1,9 +1,5 @@
 <template>
-  <el-color-picker
-    v-model="currentColor"
-    :predefine="colorPresets"
-    popper-class="theme-picker-dropdown"
-  />
+  <el-color-picker v-model="currentColor" :predefine="colorPresets" popper-class="theme-picker-dropdown" />
 </template>
 
 <script setup>

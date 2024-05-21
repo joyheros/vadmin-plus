@@ -2,6 +2,7 @@ export default {
   route: {
     home: '首页',
     login: '登录',
+    account: '用户设置',
     redirect: 'Redirect',
     error401: 'Error 401',
     error401: 'Error 403',
@@ -86,7 +87,7 @@ export default {
   navbar: {
     home: '首页',
     logout: '退出登录',
-    profile: '用户档案'
+    account: '用户设置'
   },
   notice: {
     empty: '暂无消息'

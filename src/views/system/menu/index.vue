@@ -3,12 +3,7 @@
     <div class="search-container">
       <el-form ref="queryFormRef" :model="queryParams" :inline="true">
         <el-form-item label="关键字" prop="keywords">
-          <el-input
-            v-model="queryParams.keywords"
-            placeholder="菜单名称"
-            clearable
-            @keyup.enter="handleQuery"
-          />
+          <el-input v-model="queryParams.keywords" placeholder="菜单名称" clearable @keyup.enter="handleQuery" />
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="handleQuery"
@@ -148,11 +143,7 @@
           label="路由路径"
           prop="path"
         >
-          <el-input
-            v-if="formData.type == NodeTypeEnum.CATALOG"
-            v-model="formData.path"
-            placeholder="system"
-          />
+          <el-input v-if="formData.type == NodeTypeEnum.CATALOG" v-model="formData.path" placeholder="system" />
           <el-input v-else v-model="formData.path" placeholder="user" />
         </el-form-item>
 
@@ -177,10 +168,9 @@
               根目录始终显示
               <el-tooltip placement="bottom" effect="light">
                 <template #content
-                  >是：根目录只有一个子路由显示目录
-                  <br />否：根目录只有一个子路由不显示目录，只显示子路由
+                  >是：根目录只有一个子路由显示目录 <br />否：根目录只有一个子路由不显示目录，只显示子路由
                 </template>
-                <svg-icon icon-class="about" class="inline-block"/>
+                <svg-icon icon-class="about" class="inline-block" />
               </el-tooltip>
             </div>
           </template>
@@ -199,12 +189,7 @@
         </el-form-item>
 
         <el-form-item label="排序" prop="sort">
-          <el-input-number
-            v-model="formData.sort"
-            style="width: 100px"
-            controls-position="right"
-            :min="0"
-          />
+          <el-input-number v-model="formData.sort" style="width: 100px" controls-position="right" :min="0" />
         </el-form-item>
 
         <!-- 权限标识 -->

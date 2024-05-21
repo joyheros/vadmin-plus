@@ -160,9 +160,7 @@ function rgbToHex(rgb) {
     return `${HEX_MAP_REVERSE[Math.floor(val / 16)]}${HEX_MAP_REVERSE[val % 16]}`
   }
 
-  return `#${getRemainderAndQuotient(rgb.r)}${getRemainderAndQuotient(
-    rgb.g
-  )}${getRemainderAndQuotient(rgb.b)}`
+  return `#${getRemainderAndQuotient(rgb.r)}${getRemainderAndQuotient(rgb.g)}${getRemainderAndQuotient(rgb.b)}`
 }
 
 // hsl 转 16进制

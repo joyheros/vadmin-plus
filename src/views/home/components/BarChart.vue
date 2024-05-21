@@ -5,7 +5,7 @@
       <div class="title">
         作品趋势图
         <el-tooltip effect="dark" content="点击试试下载" placement="bottom">
-          <svg-icon icon-class="download" @click="downloadEchart"/>
+          <svg-icon icon-class="download" @click="downloadEchart" />
         </el-tooltip>
       </div>
     </template>

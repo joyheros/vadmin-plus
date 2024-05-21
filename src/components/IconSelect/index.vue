@@ -1,11 +1,6 @@
 <template>
   <div ref="iconSelectRef" :style="'width:' + width" class="relative">
-    <el-input
-      v-model="selectedIcon"
-      readonly
-      placeholder="点击选择图标"
-      @click="popoverVisible = !popoverVisible"
-    >
+    <el-input v-model="selectedIcon" readonly placeholder="点击选择图标" @click="popoverVisible = !popoverVisible">
       <template #prepend>
         <template>
           <svg-icon :icon-class="selectedIcon" />
@@ -13,19 +8,14 @@
       </template>
     </el-input>
 
-    <el-popover
-      :popoverVisible="popoverVisible"
-      placement="bottom-end"
-      trigger="click"
-      :width="width"
-    >
+    <el-popover :popoverVisible="popoverVisible" placement="bottom-end" trigger="click" :width="width">
       <template #reference>
         <div
           class="cursor-pointer text-[#999] absolute-rt height-[32px] leading-[32px] px-1"
           @click="popoverVisible = !popoverVisible"
         >
-        <svg-icon icon-class="caret-up" v-show="popoverVisible"/>
-        <svg-icon icon-class="caret-down" v-show="!popoverVisible"/>
+          <svg-icon icon-class="caret-up" v-show="popoverVisible" />
+          <svg-icon icon-class="caret-down" v-show="!popoverVisible" />
         </div>
       </template>
 

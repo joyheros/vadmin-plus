@@ -4,12 +4,7 @@
 
     <div class="settings-option">
       <span class="text-xs">{{ $t('settings.themeStyle') }}</span>
-      <el-switch
-        v-model="isDark"
-        :active-icon="Moon"
-        :inactive-icon="Sunny"
-        @change="changeTheme"
-      />
+      <el-switch v-model="isDark" :active-icon="Moon" :inactive-icon="Sunny" @change="changeTheme" />
     </div>
     <div class="settings-option">
       <span class="text-xs">{{ $t('settings.themeColor') }}</span>

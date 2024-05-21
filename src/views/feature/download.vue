@@ -57,10 +57,7 @@ function base64ToBlob(dataURL) {
     <div class="flex flex-wrap">
       <el-button
         @click="
-          downloadByUrl(
-            'https://cdn.pixabay.com/photo/2016/10/03/07/00/black-and-white-1711001_1280.jpg',
-            'panda.jpg'
-          )
+          downloadByUrl('https://cdn.pixabay.com/photo/2016/10/03/07/00/black-and-white-1711001_1280.jpg', 'panda.jpg')
         "
       >
         下载在线文件

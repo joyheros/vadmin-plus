@@ -3,11 +3,7 @@
     <div class="search-container">
       <el-form ref="queryFormRef" :model="queryParams" :inline="true">
         <el-form-item label="关键字" prop="keywords">
-          <el-input
-            v-model="queryParams.keywords"
-            placeholder="部门名称"
-            @keyup.enter="handleQuery"
-          />
+          <el-input v-model="queryParams.keywords" placeholder="部门名称" @keyup.enter="handleQuery" />
         </el-form-item>
 
         <el-form-item label="部门状态" prop="status">
@@ -30,12 +26,7 @@
         <el-button v-hasPerm="['sys:dept:add']" type="success" @click="openDialog(0, undefined)">
           <svg-icon icon-class="plus" />新增
         </el-button>
-        <el-button
-          v-hasPerm="['sys:dept:delete']"
-          type="danger"
-          :disabled="ids.length === 0"
-          @click="handleDelete()"
-        >
+        <el-button v-hasPerm="['sys:dept:delete']" type="danger" :disabled="ids.length === 0" @click="handleDelete()">
           <svg-icon icon-class="trash" />删除
         </el-button>
       </template>
@@ -109,12 +100,7 @@
           <el-input v-model="formData.name" placeholder="请输入部门名称" />
         </el-form-item>
         <el-form-item label="显示排序" prop="sort">
-          <el-input-number
-            v-model="formData.sort"
-            controls-position="right"
-            style="width: 100px"
-            :min="0"
-          />
+          <el-input-number v-model="formData.sort" controls-position="right" style="width: 100px" :min="0" />
         </el-form-item>
         <el-form-item label="部门状态">
           <el-radio-group v-model="formData.status">

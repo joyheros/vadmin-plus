@@ -35,20 +35,13 @@ function hoverDescription(event, description) {
   const cellWidth = event.target.offsetWidth
 
   // 当文本宽度大于容器宽度两倍时，代表文本显示超过两行
-  currentWidth > 2 * cellWidth
-    ? (descriptionTooltip.value = true)
-    : (descriptionTooltip.value = false)
+  currentWidth > 2 * cellWidth ? (descriptionTooltip.value = true) : (descriptionTooltip.value = false)
 }
 </script>
 
 <template>
   <div class="notice-container border-b-[1px] border-solid border-[#f0f0f0] dark:border-[#303030]">
-    <el-avatar
-      v-if="props.noticeItem.avatar"
-      :size="18"
-      :src="mail"
-      class="notice-container-avatar"
-    />
+    <el-avatar v-if="props.noticeItem.avatar" :size="18" :src="mail" class="notice-container-avatar" />
     <div class="notice-container-text">
       <div class="notice-text-title text-[#000000d9] dark:text-white">
         <el-tooltip
@@ -61,12 +54,7 @@ function hoverDescription(event, description) {
             {{ props.noticeItem.title }}
           </div>
         </el-tooltip>
-        <el-tag
-          v-if="props.noticeItem?.extra"
-          :type="props.noticeItem?.status"
-          size="small"
-          class="notice-title-extra"
-        >
+        <el-tag v-if="props.noticeItem?.extra" :type="props.noticeItem?.status" size="small" class="notice-title-extra">
           {{ props.noticeItem?.extra }}
         </el-tag>
       </div>

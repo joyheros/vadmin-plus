@@ -22,12 +22,7 @@
             </el-form-item>
 
             <el-form-item label="状态" prop="status">
-              <el-select
-                v-model="queryParams.status"
-                placeholder="全部"
-                clearable
-                class="!w-[100px]"
-              >
+              <el-select v-model="queryParams.status" placeholder="全部" clearable class="!w-[100px]">
                 <el-option label="启用" value="1" />
                 <el-option label="禁用" value="0" />
               </el-select>
@@ -46,9 +41,7 @@
             </el-form-item>
 
             <el-form-item>
-              <el-button type="primary" @click="handleQuery"
-                ><svg-icon icon-class="search" />搜索</el-button
-              >
+              <el-button type="primary" @click="handleQuery"><svg-icon icon-class="search" />搜索</el-button>
               <el-button @click="resetQuery"><svg-icon icon-class="reset" />重置</el-button>
             </el-form-item>
           </el-form>
@@ -58,11 +51,7 @@
           <template #header>
             <div class="flex justify-between">
               <div>
-                <el-button
-                  v-hasPerm="['sys:user:add']"
-                  type="success"
-                  @click="openDialog('user-form')"
-                >
+                <el-button v-hasPerm="['sys:user:add']" type="success" @click="openDialog('user-form')">
                   <svg-icon icon-class="plus" />新增
                 </el-button>
                 <el-button
@@ -98,13 +87,7 @@
           <el-table v-loading="loading" :data="pageData" @selection-change="handleSelectionChange">
             <el-table-column type="selection" width="50" align="center" />
             <el-table-column key="id" label="编号" align="center" prop="id" width="60" />
-            <el-table-column
-              key="username"
-              label="用户名"
-              width="120"
-              align="center"
-              prop="username"
-            />
+            <el-table-column key="username" label="用户名" width="120" align="center" prop="username" />
             <el-table-column label="用户昵称" width="150" align="center" prop="nickname" />
             <el-table-column label="职务" width="120" align="center" prop="roleName" />
             <el-table-column label="性别" width="60" align="center" prop="genderLabel" />
@@ -160,27 +143,11 @@
     </el-row>
 
     <!-- 弹窗 -->
-    <el-dialog
-      v-model="dialog.visible"
-      :title="dialog.title"
-      :width="dialog.width"
-      append-to-body
-      @close="closeDialog"
-    >
+    <el-dialog v-model="dialog.visible" :title="dialog.title" :width="dialog.width" append-to-body @close="closeDialog">
       <!-- 用户新增/编辑表单 -->
-      <el-form
-        v-if="dialog.type === 'user-form'"
-        ref="userFormRef"
-        :model="formData"
-        :rules="rules"
-        label-width="80px"
-      >
+      <el-form v-if="dialog.type === 'user-form'" ref="userFormRef" :model="formData" :rules="rules" label-width="80px">
         <el-form-item label="用户名" prop="username">
-          <el-input
-            v-model="formData.username"
-            :readonly="!!formData.id"
-            placeholder="请输入用户名"
-          />
+          <el-input v-model="formData.username" :readonly="!!formData.id" placeholder="请输入用户名" />
         </el-form-item>
 
         <el-form-item label="用户昵称" prop="nickname">
@@ -200,23 +167,13 @@
 
         <el-form-item label="性别" prop="gender">
           <el-select v-model="formData.gender" placeholder="请选择">
-            <el-option
-              v-for="item in genders"
-              :key="item.value"
-              :label="item.label"
-              :value="item.value"
-            />
+            <el-option v-for="item in genders" :key="item.value" :label="item.label" :value="item.value" />
           </el-select>
         </el-form-item>
 
         <el-form-item label="角色" prop="roleIds">
           <el-select v-model="formData.roleIds" multiple placeholder="请选择">
-            <el-option
-              v-for="item in roleList"
-              :key="item.value"
-              :label="item.label"
-              :value="item.value"
-            />
+            <el-option v-for="item in roleList" :key="item.value" :label="item.label" :value="item.value" />
           </el-select>
         </el-form-item>
 
@@ -556,8 +513,7 @@ function downloadTemplate() {
   downloadTemplateApi().then((response) => {
     const fileData = response.data
     const fileName = decodeURI(response.headers['content-disposition'].split(';')[1].split('=')[1])
-    const fileType =
-      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8'
+    const fileType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8'
 
     const blob = new Blob([fileData], { type: fileType })
     const downloadUrl = window.URL.createObjectURL(blob)
@@ -593,8 +549,7 @@ function handleExport() {
   exportUser(queryParams).then((response) => {
     const fileData = response.data
     const fileName = decodeURI(response.headers['content-disposition'].split(';')[1].split('=')[1])
-    const fileType =
-      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8'
+    const fileType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8'
 
     const blob = new Blob([fileData], { type: fileType })
     const downloadUrl = window.URL.createObjectURL(blob)

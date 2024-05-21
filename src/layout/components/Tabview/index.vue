@@ -11,16 +11,18 @@
         @contextmenu.prevent="openContentMenu(tag, $event)"
       >
         {{ translateRouteTitle(tag.title) }}
-        <svg-icon icon-class="close" class="close-icon" size="12px" v-if="!isAffix(tag)" @click.prevent.stop="closeSelectedTag(tag)"/>
+        <svg-icon
+          icon-class="close"
+          class="close-icon"
+          size="12px"
+          v-if="!isAffix(tag)"
+          @click.prevent.stop="closeSelectedTag(tag)"
+        />
       </router-link>
     </el-scrollbar>
 
     <!-- tag标签操作菜单 -->
-    <ul
-      v-show="contentMenuVisible"
-      class="contextmenu"
-      :style="{ left: left + 'px', top: top + 'px' }"
-    >
+    <ul v-show="contentMenuVisible" class="contextmenu" :style="{ left: left + 'px', top: top + 'px' }">
       <li @click="refreshSelectedTag(selectedTag)">
         <svg-icon icon-class="refresh" />
         刷新
@@ -184,10 +186,7 @@ function isAffix(tag) {
 
 function isFirstView() {
   try {
-    return (
-      selectedTag.value.path === '/home' ||
-      selectedTag.value.fullPath === tabviewStore.visitedViews[1].fullPath
-    )
+    return selectedTag.value.path === '/home' || selectedTag.value.fullPath === tabviewStore.visitedViews[1].fullPath
   } catch (err) {
     return false
   }
@@ -195,10 +194,7 @@ function isFirstView() {
 
 function isLastView() {
   try {
-    return (
-      selectedTag.value.fullPath ===
-      tabviewStore.visitedViews[tabviewStore.visitedViews.length - 1].fullPath
-    )
+    return selectedTag.value.fullPath === tabviewStore.visitedViews[tabviewStore.visitedViews.length - 1].fullPath
   } catch (err) {
     return false
   }

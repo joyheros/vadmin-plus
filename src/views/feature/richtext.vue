@@ -48,12 +48,7 @@ onBeforeUnmount(() => {
 <template>
   <div class="editor-wrapper">
     <!-- 工具栏 -->
-    <Toolbar
-      id="toolbar-container"
-      :editor="editorRef"
-      :default-config="toolbarConfig"
-      :mode="mode"
-    />
+    <Toolbar id="toolbar-container" :editor="editorRef" :default-config="toolbarConfig" :mode="mode" />
     <!-- 编辑器 -->
     <Editor
       id="editor-container"
