@@ -1,1 +1,0 @@
-import{al as a}from"./index-BFIPRRcq.js";function r(t){const e=new FormData;return e.append("file",t),a({url:"/api/v1/files",method:"post",data:e,headers:{"Content-Type":"multipart/form-data"}})}function o(t){return a({url:"/api/v1/files",method:"delete",params:{filePath:t}})}export{o as d,r as u};
