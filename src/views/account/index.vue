@@ -52,7 +52,7 @@ const witchPanel = ref('profile')
             }
           "
         >
-          <div class="flex items-center z-10">
+          <div class="flex items-center">
             <svg-icon :icon-class="item.icon" size="20px" />&nbsp;
             <span>{{ item.label }}</span>
           </div>
@@ -69,10 +69,10 @@ const witchPanel = ref('profile')
 .account-menu {
   background-color: var(--background-color);
   border: none;
-
+  
   .el-menu-item {
     height: 48px !important;
-    color: var(--menu-text);
+    color: var(--el-text-color-regular);
 
     &:hover {
       color: var(--menu-hover);
