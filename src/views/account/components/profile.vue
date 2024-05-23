@@ -50,10 +50,9 @@ const onSubmit = async (formEl) => {
           accept="image/*"
           action="#"
           :limit="1"
-          :auto-upload="true"
-          :show-file-list="true"
+          :auto-upload="false"
+          :show-file-list="false"
           :on-change="onChange"
-          :on-preview="true"
         >
           <el-button plain class="ml-4">
             <svg-icon icon-class="upload" />

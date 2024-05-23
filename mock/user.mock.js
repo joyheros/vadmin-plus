@@ -10,6 +10,8 @@ export default defineMock([
         userId: 1,
         nickname: "管理员",
         username: "admin",
+        email: "admin@mail.com",
+        mobile: "13512345678",
         avatar: "@/assets/avatar.png",
         roles: ["admin"],
         perms: [

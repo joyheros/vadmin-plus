@@ -118,7 +118,6 @@ router.beforeEach(async (to, from, next) => {
       next({ path: '/' })
       NProgress.done()
     } else {
-      console.log('enter has token in route')
       const userStore = useUserStore()
       const hasRoles = userStore.user.roles && userStore.user.roles.length > 0
       if (hasRoles) {
@@ -133,11 +132,9 @@ router.beforeEach(async (to, from, next) => {
         try {
           const { roles } = await userStore.getUserInfo()
           const accessRoutes = await permissionStore.generateRoutes(roles)
-          console.log('before add: ', accessRoutes)
           accessRoutes.forEach((route) => {
             router.addRoute(route)
           })
-          console.log('after add: ', accessRoutes)
           next({ ...to, replace: true })
         } catch (error) {
           // 移除 token 并跳转登录页
