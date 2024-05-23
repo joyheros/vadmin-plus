@@ -28,6 +28,18 @@
 
 请参照 [Vite配置参考](https://vitejs.dev/config/).
 
+## 环境准备
+
+### 安装NodeJS
+
+安装[NodeJS](https://nodejs.org/)，版本要求大于等于V20
+
+### 安装pnpm
+
+```sh
+npm install pnpm -g
+```
+
 ## 项目安装
 
 ```sh

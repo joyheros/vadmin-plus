@@ -27,6 +27,18 @@
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
+## Parpare Environment
+
+### Install NodeJS
+
+Install [NodeJS](https://nodejs.org/), version >= 20
+
+### Install pnpm
+
+```sh
+npm install pnpm -g
+```
+
 ## Project Setup
 
 ```sh
