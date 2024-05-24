@@ -6,8 +6,19 @@
 
 [vadmin-plus](https://github.com/joyheros/vadmin-plus) is a free open source management front-end template, built with pnpm, vue3, vite5, Element-Plus, Vue-Router, Pinia, Axios and other front-end mainstream technology stack. In order to reduce the difficulty of learning, this project reduces to introducte third-party components as much as possible, and does not package components such as Element Plus, so as to ensure low cost and high scalability. It is hoped that through this project, everyone can spend less time and take fewer detcorners when learning technology stacks such as Vue3.
 
-## Preview address
-- [github site](https://joyheros.github.io/vadmin-plus/)
+## Preview
+- Home
+<p align="center">
+  <img alt="home" src="https://github.com/joyheros/vadmin-plus/blob/main/photo/home.png">
+</p>
+- Menu Management
+<p align="center">
+  <img alt="menu" src="https://github.com/joyheros/vadmin-plus/blob/main/photo/menu.png">
+</p>
+- About
+<p align="center">
+  <img alt="about" src="https://github.com/joyheros/vadmin-plus/blob/main/photo/about.png">
+</p>
 
 ## Project Features
 
